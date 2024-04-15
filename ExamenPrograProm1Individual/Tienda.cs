@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace ExamenPrograProm1Individual
 {
-    internal class Program
+    internal class Tienda
     {
-        static void Main(string[] args)
+        public void Execute()
         {
-            Tienda tienda = new Tienda();
-            tienda.Execute();
+
         }
     }
 }
