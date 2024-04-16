@@ -23,6 +23,10 @@ namespace ExamenPrograProm1Individual
             this.p = peso;
             this.pr = precio;
         }
+        public override string GetName()
+        {
+            return n;
+        }
         public override string GetData()
         {
             return $"El producto {n} pesa {p} es {t} y es de color {c}";

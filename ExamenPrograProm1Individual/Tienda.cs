@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,10 +10,12 @@ namespace ExamenPrograProm1Individual
     internal class Tienda
     {
         List<Productos> producto;
-
+        List<int> carrito;
         public Tienda() 
         {
             producto = new List<Productos>();
+            carrito = new List<int>();
+                    
             AgregarProductos();
         }
         public void ListadeProductos()
@@ -39,6 +42,10 @@ namespace ExamenPrograProm1Individual
                     case "1": 
                         Catálogo();
                         break;
+                    case "2":
+                        Carrito();
+                        break;
+                    case "3":
                     case "4":
                         continueFlag = false;
                         break;
@@ -55,17 +62,25 @@ namespace ExamenPrograProm1Individual
         }
         public void Catálogo()
         {
-            if (producto != null)
+            Console.WriteLine("Catálogo de Productos:");
+            Console.WriteLine("Elija un producto");
+            for (int i = 0; i < producto.Count; i++)
             {
-                Console.WriteLine("Catálogo de Productos:");
-                foreach (Productos prod in producto)
-                {
-                    Console.WriteLine(prod.GetData());
-                }
+                Console.WriteLine($"{i+1}. {producto[i].GetData()}");
             }
-            else
+            int index = int.Parse(Console.ReadLine());
+            if (index >= 0 && index < producto.Count)
             {
-                Console.WriteLine("No hay productos disponibles en el catálogo.");
+                producto[index].GetPrice();
+            }
+        }
+        public void Carrito()
+        {
+            Console.WriteLine("Carrito de Compras:");
+            for (int i = 0 ; i < producto.Count; i++)
+            {
+                Console.WriteLine($"{ i + 1}. {producto[i].GetName()}");
+                Console.WriteLine($"{producto[i].GetPrice()}");
             }
         }
 

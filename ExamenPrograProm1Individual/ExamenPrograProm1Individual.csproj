@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arcilla.cs" />
+    <Compile Include="Carrito.cs" />
     <Compile Include="Productos.cs" />
     <Compile Include="Tela.cs" />
     <Compile Include="Tienda.cs" />

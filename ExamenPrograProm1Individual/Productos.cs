@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamenPrograProm1Individual
 {
-    internal class Productos
+    internal class Productos:Carrito
     {
         protected string name;
         protected string tamaño;
@@ -15,6 +15,10 @@ namespace ExamenPrograProm1Individual
         protected string peso;
         protected float precio;
 
+        public virtual string GetName()
+        {
+            return name;
+        }
         public virtual string GetData()
         {
             return $"";
