@@ -13,5 +13,6 @@ namespace ExamenPrograProm1Individual
             Tienda tienda = new Tienda();
             tienda.Execute();
         }
+       
     }
 }

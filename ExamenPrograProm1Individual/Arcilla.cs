@@ -25,7 +25,7 @@ namespace ExamenPrograProm1Individual
         }
         public override string GetData()
         {
-            return $"El producto {name} pesa {peso} es {tamaño} y es de color {color}";
+            return $"El producto {n} pesa {p} es {t} y es de color {c}";
         }
         public override float GetPrice()
         {

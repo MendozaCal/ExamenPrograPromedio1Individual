@@ -17,7 +17,7 @@ namespace ExamenPrograProm1Individual
 
         public virtual string GetData()
         {
-            return "";
+            return $"";
         }
         public virtual float GetPrice()
         {
