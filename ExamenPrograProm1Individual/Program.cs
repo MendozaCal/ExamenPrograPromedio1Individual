@@ -11,7 +11,7 @@ namespace ExamenPrograProm1Individual
         static void Main(string[] args)
         {
             Tienda tienda = new Tienda();
-            tienda.Execute();
+            tienda.MainMenu();
         }
        
     }

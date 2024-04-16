@@ -10,21 +10,15 @@ namespace ExamenPrograProm1Individual
     internal class Tienda
     {
         List<Productos> producto;
-        List<int> carrito;
-        public Tienda() 
+        List<Productos> carrito;
+        public Tienda()
         {
             producto = new List<Productos>();
-            carrito = new List<int>();
-                    
-            AgregarProductos();
-        }
-        public void ListadeProductos()
-        {
-            
-        }
-        public void Execute()
-        {
-            MainMenu();
+            carrito = new List<Productos>();
+            producto.Add(new Arcilla("Maceta", "Mediano", "", "Rojo", "Libiano", 10));
+            producto.Add(new Arcilla("Olla", "Grande", "", "Marrón", "Ligero", 20));
+            producto.Add(new Tela("Sabana", "2 plazas", "Seda", "Gris", "", 12));
+            producto.Add(new Tela("Colcha", "1.5 plazas", "Seda", "Gris", "", 30));
         }
         public void MainMenu()
         {
@@ -52,13 +46,6 @@ namespace ExamenPrograProm1Individual
                 }
             }
             Console.ReadLine();
-        }
-        public void AgregarProductos()
-        {
-            producto.Add(new Arcilla("Maceta", "Mediano", "", "Rojo", "Libiano", 10));
-            producto.Add(new Arcilla("Olla", "Grande", "", "Marrón", "Ligero", 20));
-            producto.Add(new Tela("Sabana", "2 plazas", "Seda", "Gris", "", 12));
-            producto.Add(new Tela("Colcha", "1.5 plazas", "Seda", "Gris", "", 30));
         }
         public void Catálogo()
         {
